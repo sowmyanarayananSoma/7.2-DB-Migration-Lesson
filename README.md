@@ -214,3 +214,20 @@ SUPABASE_ANON_KEY=your-anon-key
 | DELETE | `/api/products/:id` | Delete a product |
 | POST | `/api/auth/register` | Register a user (production only) |
 | POST | `/api/auth/login` | Login (production only) |
+
+---
+
+## Practice
+
+Now that you have seen how to migrate a MongoDB database to Atlas, do the same with your own project.
+
+1. Fork your mid-term project on GitHub — or if it is only local, make a copy of the folder
+2. Open the copy in VS Code
+3. Create a new MongoDB Atlas cluster for your mid-term project
+4. Get the connection string from Atlas (**Connect → Drivers → Node.js**)
+5. Add your database name to the connection string before the `?`
+6. Replace your local `MONGODB_URI` in your `.env` file with the Atlas URI
+7. Start your server and confirm it connects to Atlas successfully
+8. Open MongoDB Compass, connect using the Atlas URI, and verify your collections are visible in the cloud
+
+> Make sure your `.env` file is in `.gitignore` before pushing — your Atlas credentials must never be committed to GitHub.
